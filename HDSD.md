@@ -5,7 +5,10 @@
 - Nhập tên đăng nhập[1] và mật khẩu[2] được cung cấp, chọn `Ghi nhớ đăng nhập` để lần truy cập sau không cần phải đăng nhập lại. Nhấn nút `đăng nhập`[4] để truy cập sử dụng hệ thống.
 ![image](./images/dangnhap.png)
 Sau khi đăng nhập thành công, giao diện trang chủ của hệ thống sẽ hiển thị như hình dưới đây:
-![image](./images/trangchu.png)
+<video width="640" height="480" controls>
+  <source src="./videos/dangnhap.mp4" type="video/mp4">
+  Trình duyệt của bạn không hỗ trợ thẻ video.
+</video>
 Trong đó:
 1. Thanh menu điều hướng: 
     - Trang chủ
@@ -25,6 +28,9 @@ Trong đó:
     - Prompt xử lý mặc định (Không bắt buộc): Đây là câu lệnh mặc định để hướng dẫn trợ lý AI trong quá trình trả lời câu hỏi. __Giữ nguyên nếu người dùng không có yêu cầu đặc biệt hoặc chưa biết cách viết system prompt.__
     - Kịch bản (Không bắt buộc): Đây là các tình huống hoặc kịch bản cụ thể mà trợ lý AI sẽ xử lý. __Giữ nguyên nếu người dùng không có yêu cầu đặc biệt.__
 
-3. Nhấn nút `Tạo trợ lý AI` để hoàn tất quá trình tạo trợ lý AI.
-![image](./images/thongtinbot_1.png)
-![image](./images/thongtinbot_2.png)
+3. Nhấn nút `Tạo trợ lý AI` để tạo trợ lý AI.
+
+<video width="640" height="480" controls>
+  <source src="./videos/taomoi.mp4" type="video/mp4">
+  Trình duyệt của bạn không hỗ trợ thẻ video.
+</video>
