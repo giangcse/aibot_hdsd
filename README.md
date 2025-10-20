@@ -1,7 +1,26 @@
 # <a id="_Toc23358"></a>HƯỚNG DẪN SỬ DỤNG HỆ THÔNG CHATBOT HỖ TRỢ TRA CỨU THÔNG TIN VIAIBOT
-![](images/drive.png)
-![](images/ios.png)
-![](images/android.png)
+
+* Video hướng dẫn sử dụng:
+> 1. [Đăng nhập](https://drive.google.com/file/d/12Q_mTNi-N7Wjx0_29WoIEOtNLYThJhEk/view?usp=drive_link)
+> 2. [Tạo trợ lý ảo AI](https://drive.google.com/file/d/1uyKdeXAd9QOp_Mz9rVHznCuYwR3OZG2o/view?usp=drive_link)
+> 3. [Trò chuyện](https://drive.google.com/file/d/11D6d6cCwenpzEX8Ncl8GzlqviXrPv53B/view?usp=drive_link)
+> > 3. 1. [Tạo mới cuộc trò chuyện](https://drive.google.com/file/d/1mueL2qmoLvAh3kLCJylRe8qhPvf5xeXj/view?usp=drive_link)
+> > 3. 2. [Lịch sử trò chuyện](https://drive.google.com/file/d/15Uvw-B3jrKQVJ1eZFw5XHr4AlfeLG1YB/view?usp=drive_link)
+> > 3. 3. [Tạo tính năng](https://drive.google.com/file/d/1Uxsy3BilOEATcb5QOE5od5zKYhFWNCbc/view?usp=drive_link)
+> > 3. 4. [Chat với nội dung file](https://drive.google.com/file/d/1poo428DQ2dOEM37IXoL6L4UuDRjon0cj/view?usp=drive_link)
+> 4. [Quản lý trợ lý AI](https://drive.google.com/file/d/1cfrCqx8gxvJCrFbBHboIqB0JfLu4JV8S/view?usp=drive_link)
+> 5. [Kho tri thức](https://drive.google.com/file/d/19PdMMkv8qpBv43Dgq2-VqmglzmCRUImu/view?usp=drive_link)
+
+<img width="256" height="256" alt="drive" src="https://github.com/user-attachments/assets/06b25d1b-61c3-4ef7-b018-a29c8ec9744f" />
+
+* Các câu hỏi thường gặp [FAQs](https://github.com/giangcse/aibot_hdsd/wiki/FAQs)
+
+* Cài đặt ứng dụng trên thiết bị di động
+<img width="256" height="256" alt="ios" src="https://github.com/user-attachments/assets/fa29ad8a-dbd6-4ba0-843a-52174ed5350e" />
+
+<img width="256" height="256" alt="android" src="https://github.com/user-attachments/assets/fa83f584-c9b9-4f70-b6d7-18834f157e73" />
+
+
 ## Đăng nhập
 
 ![](images/image_01.png)
