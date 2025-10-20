@@ -17,7 +17,7 @@
 * Các câu hỏi thường gặp [FAQs](https://github.com/giangcse/aibot_hdsd/wiki/FAQs)
 
 * Cài đặt ứng dụng trên thiết bị di động
-
+  
 <img width="256" height="256" alt="ios" src="https://github.com/user-attachments/assets/fa29ad8a-dbd6-4ba0-843a-52174ed5350e" />
 
 <img width="256" height="256" alt="android" src="https://github.com/user-attachments/assets/fa83f584-c9b9-4f70-b6d7-18834f157e73" />
