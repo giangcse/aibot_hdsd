@@ -36,7 +36,7 @@ Người dùng truy cập vào [https://aibot\.vnptvinhlong\.vn/dang\-nhap](http
 
 ## Quản lý trợ lý AI 
 
-### <a id="_Toc6117"></a>Quản lý trợ lý AI 
+### Quản lý trợ lý AI 
 
 Mục đích: Cho phép người dùng quản lý trợ lý AI hỗ trợ cho công việc\. 
 
@@ -88,7 +88,7 @@ Mục đích: Cho phép người dùng quản lý trợ lý AI hỗ trợ cho c�
 
 \- Người dùng bấm nút “Xóa” ở trang thông tin bot, nhập tên trợ lý AI và bấm “Xác nhận” để xóa bot\.
 
-### <a id="_Toc301"></a>Quản lý tri thức AI
+### Quản lý tri thức AI
 
 ![](images/image_09.png)
 
@@ -107,7 +107,7 @@ Mục đích: Cho phép người dùng quản lý trợ lý AI hỗ trợ cho c�
 
 \- Người dùng chọn “Danh sách tri thức” để thêm tri thức cho AI bằng các file hiện có
 
-### <a id="_Toc30478"></a>Tích hợp
+### Tích hợp
 
 ![](images/image_13.png)
 
@@ -119,15 +119,15 @@ Mục đích: Cho phép người dùng quản lý trợ lý AI hỗ trợ cho c�
 
 \- Người dùng sao chép đoạn mã và thêm vào trang web để tích hợp AI
 
-### <a id="_Toc4593"></a>Lịch sử trò chuyện
+### Lịch sử trò chuyện
 
 ![](images/image_16.png)
 
 \- Người dùng chọn mốc thời gian để tiến hành xem lịch sử trò chuyện
 
-## <a id="_Toc22182"></a>Kho tri thức
+## Kho tri thức
 
-### <a id="_Toc26523"></a>Tri thức 
+### Tri thức 
 
 1. Kho tri thức
 
@@ -185,7 +185,7 @@ __2\.2\. __Soạn thảo
 
 ![](images/image_27.png)
 
-## <a id="_Toc31211"></a>__Trò chuyện__
+## Trò chuyện
 
 ![](images/image_28.png)
 
@@ -245,11 +245,11 @@ Các tài liệu tải lên thành công
 
 \- Người dùng chọn search khi các thông tin cần tìm kiếm trên Web 
 
-## <a id="_Toc21248"></a>Quản lý người dùng
+## Quản lý người dùng
 
 ![](images/image_43.png)
 
-### <a id="_Toc9086"></a>Hồ sơ
+### Hồ sơ
 
 1. Cập nhật
 
@@ -263,10 +263,11 @@ Các tài liệu tải lên thành công
 
 \- Bấm nút xóa và xác nhận để xóa hồ sơ người dùng 
 
-### <a id="_Toc5476"></a>Tạo tài khoản
+### Tạo tài khoản
 
 ![](images/image_46.png)  
 \- Quản trị viên tiến hành nhập thông tin tài khoản và bấm nút “Tạo tài khoản” để cấp tài khoản cho người dùng
 
-{{ site.author.name }}
-{{ site.social.github }}
+---
+Publisher: {{ site.author.name }}
+github: {{ site.social.github }}
