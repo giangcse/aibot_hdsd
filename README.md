@@ -263,3 +263,5 @@ Các tài liệu tải lên thành công
 ![](images/image_46.png)  
 \- Quản trị viên tiến hành nhập thông tin tài khoản và bấm nút “Tạo tài khoản” để cấp tài khoản cho người dùng
 
+{{ site.author.name }}
+{{ site.social.github }}
