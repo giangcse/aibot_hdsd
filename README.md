@@ -6,6 +6,7 @@
 1. [Tạo và sử dụng trợ lý AI](/aibot_hdsd/LUONG_1)
 2. [Tra cứu tài liệu](/aibot_hdsd/LUONG_2)
 3. [Tạo và sử dụng tính năng](/aibot_hdsd/LUONG_3)
+4. [Tạo trợ lý AI tùy biến theo mục đích sử dụng](/aibot_hdsd/LUONG_4)
 
 
 ## Mục lục
