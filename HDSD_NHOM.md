@@ -49,11 +49,10 @@ Mục đích: Cho phép người dùng quản lý trợ lý AI hỗ trợ cho c�
 
 		Người dùng tiến hành điểu chỉnh các thông tin trợ lý AI và bấm nút “Cập nhật”
 
-1. Xoá trợ lý AI.
+3. Xoá trợ lý AI.
 
-![](images/image_08.png)
+	![Xóa trợ lý AI](images/xoatrolyai.gif)
 
-\- Người dùng bấm nút “Xóa” ở trang thông tin bot, nhập tên trợ lý AI và bấm “Xác nhận” để xóa bot\.
 
 ### Quản lý tri thức AI
 
