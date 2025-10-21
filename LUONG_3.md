@@ -5,12 +5,12 @@
 {:toc}
 ---
 
-## Đăng nhập
+## 1. Đăng nhập
 Đăng nhập vào hệ thống tại địa chỉ [https://aibot.vnptvinhlong.vn/dang-nhap](https://aibot.vnptvinhlong.vn/dang-nhap)
 
 ![Đăng nhập](images/dangnhap.gif)
 
-## Tạo tính năng và sử dụng
+## 2. Tạo tính năng và sử dụng
 1. Tạo tính năng
     - Chọn mục `Thêm tính năng`
     - Nhập tên, chọn loại và nhập prompt cho tính năng nếu có nhu cầu khác biệt so với prompt mặc định
