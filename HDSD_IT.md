@@ -34,17 +34,18 @@ Các bước để tạo tính năng mới như sau:
 - Bước 1: Nhấn nút Tạo tính năng mới (2) trên ảnh.
 - Bước 2: Nhập tên tính năng, chọn loại tính năng và điền prompt xử lý (nếu có yêu cầu khác so với prompt mặc định).
 
-    ![Tạo tính năng mới](images/image_55.png)
+    ![Tạo tính năng mới](images/taotinhnang.gif)
 
 - Bước 3: Nhấn nút Tạo để hoàn tất việc tạo tính năng mới.
 
     ![Tạo tính năng mới thành công](images/image_56.png)
 
-Để sử dụng tính năng đã tạo, người dùng chỉ cần nhấn vào tên tính năng trong danh sách tính năng (3) và chọn file tri thức cần sử dụng liên quan đến tính năng đó.
+Để sử dụng tính năng đã tạo, người dùng chỉ cần nhấn vào tên tính năng trong danh sách tính năng (3) và chọn file tri thức cần sử dụng liên quan đến tính năng đó. Ngoài ra người dùng có thể chỉnh sửa hoặc xóa tính năng đã tạo bằng cách nhấn vào biểu tượng __bút chì__ để chỉnh sửa hoặc biểu tượng __thùng rác__ để xóa tính năng.
 
+![Sử dụng tính năng đã tạo](images/dungtinhnang.gif)
 
 ## 3. Tạo trợ lý AI
-![Tạo mới chatbot (bước 1)](images/image_48.png)
+![Tạo mới chatbot ](images/taotrolyai.gif)
 
 Tạo mới trợ lý AI bao gồm các bước sau:
 1. Điền thông tin trợ lý AI:
@@ -57,18 +58,10 @@ Tạo mới trợ lý AI bao gồm các bước sau:
      - `{user_question}`: Chứa câu hỏi của người dùng.
    - Cấu hình kịch bản: Bật hoặc tắt cấu hình kịch bản (có thể bỏ qua). Đây là phần cấu hình các bước xử lý câu hỏi của người dùng trả lời theo kịch bản đã được thiết lập sẵn để trợ lý AI trả lời chính xác hơn, tránh các trường hợp trả lời sai lệch.
 
-    ![Kịch bản](images/image_49.png)
-
-**Sau đó, nhấn nút Tạo trợ lý AI để chuyển sang bước 2**
-
 2. Chọn tri thức cho trợ lý AI:
    Tại đây, người dùng có thể chọn các tri thức cần thiết từ kho tri thức hoặc tải lên tri thức mới để trợ lý AI có thể sử dụng trong quá trình trả lời câu hỏi của người dùng. Người dùng có thể chọn từng tri thức hoặc chọn tất cả tri thức trong kho tri thức.
 
-    ![Chọn tri thức (bước 2)](images/image_50.png)
-
 Sau khi chọn xong, nhấn nút Thêm X tri thức để huấn luyện trợ lý AI với các tri thức đã chọn.
-    
-![Thông báo đang huấn luyện](images/image_51.png)
 
 
 ## 4. Quản lý trợ lý AI
