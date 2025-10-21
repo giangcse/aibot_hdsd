@@ -51,7 +51,7 @@ Tạo mới trợ lý AI bao gồm các bước sau:
    - Tên trợ lý AI: Nhập tên cho trợ lý AI
    - Loại trợ lý AI: AI Local - Chạy mô hình trên máy chủ nội bộ, AI Pro - Chạy mô hình trên đám mây VNPT (Khuyến nghị sử dụng AI Pro).
    - Tin nhắn khởi đầu: Nhập tin nhắn khởi đầu cho trợ lý AI
-   - Prompt xử lý: Đây là phần nhập prompt để xử lý câu hỏi của người dùng. Người dùng có thể tham khảo các prompt mẫu được cung cấp sẵn hoặc tự tạo prompt riêng. Prompt phải đảm bảo có 2 bến là `{context}` và `{user_question}`. 
+   - Prompt xử lý: Đây là phần nhập prompt để xử lý câu hỏi của người dùng. Người dùng có thể tham khảo các prompt mẫu được cung cấp sẵn hoặc tự tạo prompt riêng. Prompt phải đảm bảo có 2 biến là `{context}` và `{user_question}`. 
      - `{context}`: Chứa thông tin tri thức liên quan đến câu hỏi của người dùng.
      - `{user_question}`: Chứa câu hỏi của người dùng.
    - Cấu hình kịch bản: Bật hoặc tắt cấu hình kịch bản (có thể bỏ qua). Đây là phần cấu hình các bước xử lý câu hỏi của người dùng trả lời theo kịch bản đã được thiết lập sẵn để trợ lý AI trả lời chính xác hơn, tránh các trường hợp trả lời sai lệch.
@@ -59,7 +59,7 @@ Tạo mới trợ lý AI bao gồm các bước sau:
 2. Chọn tri thức cho trợ lý AI:
    Tại đây, người dùng có thể chọn các tri thức cần thiết từ kho tri thức hoặc tải lên tri thức mới để trợ lý AI có thể sử dụng trong quá trình trả lời câu hỏi của người dùng. Người dùng có thể chọn từng tri thức hoặc chọn tất cả tri thức trong kho tri thức.
 
-Sau khi chọn xong, nhấn nút Thêm X tri thức để huấn luyện trợ lý AI với các tri thức đã chọn.
+Sau khi chọn xong, nhấn nút `Huấn luyện` để huấn luyện trợ lý AI với các tri thức đã chọn.
 
 
 ## 4. Quản lý trợ lý AI
