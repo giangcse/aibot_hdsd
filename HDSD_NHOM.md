@@ -37,7 +37,7 @@ Mục đích: Cho phép người dùng quản lý trợ lý AI hỗ trợ cho c�
 	- Bấm “Tạo trợ lý AI”
 - Bước 4: Người dùng chọn các tri thức cần thiết hoặc có thể chọn thêm tất cả tri thức trong kho tri thức
 
-	![Tạo mới trợ lý AI](images/taotrolyAI.gif)
+	![Tạo mới trợ lý AI](images/taotrolyai.gif)
 
 - Người dùng tiến hành kiểm tra các trạng thái các tri thức và tiến hành huấn luyện\. Người dùng có thể thực hiện thao tác huấn luyện tại trang quản lý trợ lý AI sau khi các tri thức được xử lý xong\.
 
@@ -149,4 +149,5 @@ Người dùng chọn trợ lý AI để tiến hành tra cứu thông tin
 
 ---
 Publisher: {{ site.author.name }}
+
 github: {{ site.social.github }}
