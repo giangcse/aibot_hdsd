@@ -35,7 +35,7 @@ Mục đích: Cho phép người dùng quản lý trợ lý AI hỗ trợ cho c�
 	- Nhập thông tin trợ lý AI 
 	- Bật kịch bản để tiến hành cấu hình kích bản \(có thể bỏ qua\)
 	- Bấm “Tạo trợ lý AI”
-- Bước 4: Người dùng chọn các tri thức cần thiết hoặc có thể chọn thêm tất cả tri thức trong kho tri thức
+- Bước 5: Người dùng chọn các tri thức cần thiết hoặc có thể chọn thêm tất cả tri thức trong kho tri thức
 
 	![Tạo mới trợ lý AI](images/taotrolyai.gif)
 
