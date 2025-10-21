@@ -38,8 +38,6 @@ Các bước để tạo tính năng mới như sau:
 
 - Bước 3: Nhấn nút Tạo để hoàn tất việc tạo tính năng mới.
 
-    ![Tạo tính năng mới thành công](images/image_56.png)
-
 Để sử dụng tính năng đã tạo, người dùng chỉ cần nhấn vào tên tính năng trong danh sách tính năng (3) và chọn file tri thức cần sử dụng liên quan đến tính năng đó. Ngoài ra người dùng có thể chỉnh sửa hoặc xóa tính năng đã tạo bằng cách nhấn vào biểu tượng __bút chì__ để chỉnh sửa hoặc biểu tượng __thùng rác__ để xóa tính năng.
 
 ![Sử dụng tính năng đã tạo](images/dungtinhnang.gif)
@@ -66,6 +64,39 @@ Sau khi chọn xong, nhấn nút Thêm X tri thức để huấn luyện trợ l
 
 ## 4. Quản lý trợ lý AI
 
+![Quản lý trợ lý AI](images/quanlytroly.gif)
+
+Chọn trợ lý AI cần quản lý từ danh sách trong phần Quản lý trợ lý AI. Tại đây, người dùng có thể thực hiện các thao tác sau:
+1. Quản lý: Xem thông tin chi tiết của trợ lý AI, bao gồm trạng thái huấn luyện,...
+2. Hồ sơ: Chỉnh sửa thông tin trợ lý AI như tên, avatar, tin nhắn khởi đầu, prompt xử lý, cấu hình kịch bản.
+3. Tri thức: Xem danh sách tri thức đã được thêm vào trợ lý AI, xóa tri thức không cần thiết hoặc thêm tri thức mới từ kho tri thức.
+4. Tích hợp: Cung cấp các thông tin cần thiết để tích hợp trợ lý AI vào các nền tảng website.
+5. Lịch sử trò chuyện: Xem lịch sử trò chuyện của trợ lý AI với người dùng.
 
 ## 5. Kho tri thức
 
+Kho tri thức là nơi người dùng quản lý các tri thức được sử dụng để huấn luyện trợ lý AI.
+- Quản lý kho tri thức (Thư mục): Tạo, sửa, xóa các thư mục để tổ chức tri thức một cách hợp lý.
+
+    ![Quản lý thư mục tri thức](images/taokhotrithuc.gif)
+
+- Thêm/Sửa/Xóa tri thức: Người dùng có thể thêm mới, sửa hoặc xóa các tri thức trong kho tri thức.
+
+    ![Upload tri thức](images/uploadfile.gif)
+    
+    Soạn thảo tri thức trực tiếp trên hệ thống:
+
+    ![Soạn thảo tri thức](images/taofile.gif)
+
+    Xóa tri thức:
+
+    ![Xóa tri thức](images/xoafile.gif)
+
+
+- Di chuyển tri thức giữa các thư mục.
+
+    ![Di chuyển tri thức](images/dichuyenfile.gif)
+
+- Chia sẻ tri thức.
+
+    ![Chia sẻ tri thức](images/chiasefile.gif)
