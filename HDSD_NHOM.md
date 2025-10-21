@@ -135,62 +135,17 @@ Người dùng chọn trợ lý AI để tiến hành tra cứu thông tin
 
 	\- Đặt chuột vào tính năng sẽ hiện các chức năng sửa, xóa
 
-1. Sử dụng tính năng đã tạo
+3. Sử dụng tính năng đã tạo
 
-![](images/image_34.png)
+	![Dùng tính năng](images/dungtinhnang.gif)
 
-\- Bấm chuột vào tính năng sẽ hiện ra bảng chọn file\. Chọn các file cần dùng và bấm xác nhận
+	\- Bấm chuột vào tính năng sẽ hiện ra bảng chọn file\. Chọn các file cần dùng và bấm xác nhận
 
-![](images/image_35.png)
+4. Tra cứu thông tin từ tài liệu
 
-1. Tra cứu thông tin từ tài liệu
+	![Tra cứu thông tin từ tài liệu](images/tracuuthongtin.gif)
 
-![](images/image_36.png)
-
-![](images/image_37.png)
-
-\- Người dùng bấm vào nút tải lên và chọn tài liệu cần tra cứu thông tin
-
-![](images/image_38.png)
-
-Các tài liệu tải lên thành công
-
-![](images/image_39.png)
-
-1. Lịch sử trò chuyện
-
-![](images/image_40.png)
-
-![](images/image_41.png)
-
-1. Tìm kiếm
-
-![](images/image_42.png)
-
-\- Người dùng chọn search khi các thông tin cần tìm kiếm trên Web 
-
-## Quản lý người dùng
-
-![](images/image_43.png)
-
-### Hồ sơ
-
-1. Cập nhật
-
-![](images/image_44.png)
-
-\- Chọn hồ sơ cần cập nhật, thay đổi thông tin và bấm “Cập nhật”
-
-1. Xóa hồ sơ
-
-![](images/image_45.png)
-
-\- Bấm nút xóa và xác nhận để xóa hồ sơ người dùng 
-
-### Tạo tài khoản
-
-![](images/image_46.png)  
-\- Quản trị viên tiến hành nhập thông tin tài khoản và bấm nút “Tạo tài khoản” để cấp tài khoản cho người dùng
+	\- Người dùng bấm vào nút tải lên và chọn tài liệu cần tra cứu thông tin
 
 ---
 Publisher: {{ site.author.name }}
