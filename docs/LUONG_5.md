@@ -14,6 +14,7 @@
 1. Vào mục Quản lý trợ lý AI
 2. Chọn trợ lý AI cần thêm tri thức
 3. Vào tab Tri thức
+
 ### 2.1. Tải lên tri thức
 
 ![Tải lên tri thức](../images/UploadTriThucMoi.gif)
