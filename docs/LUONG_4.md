@@ -11,7 +11,7 @@
 ## 1. Đăng nhập
 Đăng nhập vào hệ thống tại địa chỉ [https://aibot.vnptvinhlong.vn/dang-nhap](https://aibot.vnptvinhlong.vn/dang-nhap)
 
-![Đăng nhập](images/dangnhap.gif)
+![Đăng nhập](../images/dangnhap.gif)
 
 ## 2. Tạo Prompt cho trợ lý AI
 Sử dụng các Chatbot AI khác để tạo system prompt (ví dụ: [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com/),...) hoặc tự viết prompt theo mục đích sử dụng. _Lưu ý: Prompt phải chứa đủ 2 biến `{context}` và `{user_question}`, bên cạnh đó phải yêu cầu bot cung cấp thêm hình ảnh nếu có_
@@ -43,7 +43,7 @@ BẠN TUYỆT ĐỐI tuân thủ các quy tắc sau:
 * Nếu {context} không chứa thông tin để trả lời {user_question}, hãy trả lời duy nhất một câu: "Thông tin Quý vị yêu cầu không có trong tài liệu được cung cấp."
 ```
 
-![Tạo Prompt](images/taoprompt.gif)
+![Tạo Prompt](../images/taoprompt.gif)
 
 ## 3. Tạo trợ lý AI và sử dụng
 1. Điền tên trợ lý AI
@@ -53,4 +53,4 @@ BẠN TUYỆT ĐỐI tuân thủ các quy tắc sau:
 5. Bật kịch bản (Nếu cần xử lý các câu hỏi ngoại lệ)
 6. Chọn nút `Tạo trợ lý AI`
 
-![Tạo trợ lý AI](images/customchatbot.gif)
+![Tạo trợ lý AI](../images/customchatbot.gif)

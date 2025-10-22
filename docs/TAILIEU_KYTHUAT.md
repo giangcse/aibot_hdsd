@@ -30,7 +30,7 @@
 
 ### 4. Mối liên hệ giữa Gen AI ↔ LLM ↔ RAG
 
-![RAG-GenAI-LLM](images/ragdiagram.png)
+![RAG-GenAI-LLM](../images/ragdiagram.png)
 
 - Gen AI là khung lớn nhất: nó nói về mọi hệ thống AI tạo nội dung.
 - LLM là một thành phần đặc biệt của Gen AI, tập trung vào văn bản/ngôn ngữ.

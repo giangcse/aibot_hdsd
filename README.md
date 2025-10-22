@@ -1,4 +1,4 @@
-![image](images/banner.png)
+![image](../images/banner.png)
 
 # HƯỚNG DẪN SỬ DỤNG HỆ THỐNG CHATBOT VIAIBOT
 
