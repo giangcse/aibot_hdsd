@@ -14,9 +14,9 @@
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         max-height: calc(100vh - 100px);
-        /* Chiều cao tối đa, tránh tràn màn hình */
+        /* Chiều cao tối đa */
         display: none;
-        /* Ẩn ban đầu, JS sẽ cho hiện nếu tìm thấy mục lục */
+        /* Ẩn ban đầu */
     }
 
     #floating-toc-title {
@@ -28,10 +28,8 @@
         border-bottom: 1px solid #e0e0e0;
         border-radius: 8px 8px 0 0;
         user-select: none;
-        /* Không cho chọn chữ tiêu đề */
     }
 
-    /* Thêm mũi tên chỉ thị đóng/mở */
     #floating-toc-title::after {
         content: '▲';
         float: right;
@@ -41,31 +39,23 @@
 
     #floating-toc-container.toc-collapsed #floating-toc-title::after {
         transform: rotate(180deg);
-        /* Xoay mũi tên khi đóng */
     }
 
-    /* Đây chính là thẻ <ul id="toc"> nguyên bản */
     #floating-toc-container #toc {
         padding: 10px 16px 16px 30px;
-        /* Padding cho danh sách */
         font-size: 14px;
         max-height: 400px;
-        /* Chiều cao tối đa của danh sách */
         overflow-y: auto;
-        /* Thêm thanh cuộn nếu danh sách quá dài */
         display: block;
-        /* Mặc định hiển thị */
         margin: 0;
     }
 
     #floating-toc-container.toc-collapsed #toc {
         display: none;
-        /* Ẩn danh sách khi đóng */
     }
 
     #floating-toc-container #toc ul {
         padding-left: 20px;
-        /* Thụt lề cho các cấp con */
     }
 
     #floating-toc-container #toc li {
@@ -81,13 +71,8 @@
         text-decoration: underline;
     }
 
-    /* Quan trọng: Ẩn mục lục gốc 
-    Kramdown đôi khi bọc #toc trong thẻ <p>
-  */
-    #main_content>p:first-child>ul#toc {
-        display: none !important;
-    }
-
+    /* Ẩn mục lục gốc (rất quan trọng) */
+    #main_content>p:first-child>ul#toc,
     #main_content>ul#toc {
         display: none !important;
     }
@@ -96,47 +81,47 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
 
-        // 1. Mã để sửa nút "View on GitHub" thành "Trang chủ"
+        // 1. Mã nút "Trang chủ" (Đã hoạt động)
         var homeButton = document.querySelector(".page-header .btn");
         if (homeButton) {
             homeButton.innerHTML = "Trang chủ";
             homeButton.href = "{{ site.baseurl | default: '' }}/";
         }
 
-        // 2. Mã để thay đổi nội dung footer
-        var footerContent = document.querySelector(".site-footer-inner");
-        if (footerContent) {
-            footerContent.innerHTML = "Bản quyền © 2025 ViAIBOT. Phát triển bởi VNPT Vĩnh Long.";
+        // 2. Mã thay đổi footer (ĐÃ SỬA)
+        // Đổi selector thành ".site-footer" và thay thế nội dung bên trong
+        var footerContainer = document.querySelector(".site-footer");
+        if (footerContainer) {
+            // Ghi đè toàn bộ nội dung của footer
+            footerContainer.innerHTML = '<span class="site-footer-credits">Bản quyền © 2025 ViAIBOT. Phát triển bởi VNPT Vĩnh Long.</span>';
         }
 
-        // 3. Mã để tạo Mục Lục Trôi
-        var originalToc = document.getElementById("toc"); // Tìm thẻ <ul id="toc">
+        // 3. Mã tạo Mục Lục Trôi
+        // Tìm mục lục gốc mà Kramdown tạo ra
+        var originalToc = document.getElementById("toc");
 
-        // Chỉ chạy nếu trang này có mục lục
+        // Chỉ chạy nếu trang này có mục lục (id="toc")
         if (originalToc) {
 
-            // Tạo container
+            // Tạo các phần tử cho widget
             var tocContainer = document.createElement("div");
             tocContainer.id = "floating-toc-container";
 
-            // Tạo Tiêu đề/Nút bấm
             var tocTitle = document.createElement("div");
             tocTitle.id = "floating-toc-title";
             tocTitle.textContent = "Mục lục";
 
-            // Thêm tiêu đề vào container
+            // Gắn các phần tử lại
             tocContainer.appendChild(tocTitle);
+            tocContainer.appendChild(originalToc); // Di chuyển <ul> vào widget
 
-            // Di chuyển <ul> (originalToc) vào container
-            tocContainer.appendChild(originalToc);
-
-            // Thêm container vào body
+            // Thêm widget vào trang
             document.body.appendChild(tocContainer);
 
             // Cho widget hiển thị
             tocContainer.style.display = "block";
 
-            // Thêm sự kiện click để ẩn/hiện mục lục
+            // Thêm sự kiện click để ẩn/hiện
             tocTitle.addEventListener("click", function () {
                 tocContainer.classList.toggle("toc-collapsed");
             });
