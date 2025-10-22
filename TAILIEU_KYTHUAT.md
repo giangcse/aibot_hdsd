@@ -65,3 +65,17 @@ Ví dụ:
 - Phụ thuộc vào chất lượng dữ liệu và tìm kiếm ngữ nghĩa.
 - Cần hệ thống hạ tầng lưu trữ & truy xuất (vector database: Pinecone, Weaviate, Milvus, FAISS...).
 - Nếu truy xuất kém, câu trả lời dễ bị sai lệch.
+
+## II. FAQs về hệ thống chatbot hỗ trợ tra cứu thông tin VIAIBOT
+
+1. VIAIBOT là gì?
+> VIAIBOT là hệ thống chatbot sử dụng kỹ thuật Retrieval‑Augmented Generation (RAG) để cung cấp câu trả lời chính xác và cập nhật dựa trên kho dữ liệu nội bộ của doanh nghiệp hoặc tổ chức. VIAIBOT kết hợp sức mạnh của các mô hình ngôn ngữ lớn (LLM) với khả năng truy xuất thông tin từ các nguồn dữ liệu bên ngoài (do ngườii dùng upload), giúp người dùng nhanh chóng tìm thấy thông tin cần thiết một cách hiệu quả.
+
+2. Dữ liệu của tôi có an toàn khi sử dụng VIAIBOT không?
+> Chúng tôi cam kết bảo vệ dữ liệu của bạn. VIAIBOT có 2 dạng triển khai: On‑Premise (cài đặt tại chỗ) và Cloud VNPT (đám mây của VNPT). Với phiên bản On‑Premise, toàn bộ dữ liệu và mô hình được lưu trữ và xử lý trên hệ thống của bạn, đảm bảo tính riêng tư và bảo mật cao nhất. Với phiên bản Cloud, chúng tôi cam kết bảo vệ dữ liệu của bạn khỏi truy cập trái phép.
+
+3. VIAIBOT có thể cá nhân hóa không?
+> Có, VIAIBOT có thể được tùy chỉnh để phù hợp với nhu cầu cụ thể của cá nhân hoặc tổ chức. Bạn có thể tạo các trợ lý AI tùy biến theo mục đích sử dụng bằng việc viết lại prompt xử lý cũng như tạo thêm các tính năng.
+
+4. Phải làm sao nếu tôi quên mật khẩu?
+> Vì mật khẩu của bạn đã được hệ thống mã hóa và không thể dịch ngược, vui lòng liên hệ với nhân viên VNPT để được trợ giúp đặt lại mật khẩu mới.
