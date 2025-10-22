@@ -3,20 +3,16 @@
     #floating-toc-container {
         position: fixed;
         top: 80px;
-        /* Khoảng cách từ lề trên */
         right: 20px;
-        /* Khoảng cách từ lề phải */
         width: 300px;
-        /* Độ rộng của widget */
         z-index: 999;
         background-color: #ffffff;
         border: 1px solid #e0e0e0;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         max-height: calc(100vh - 100px);
-        /* Chiều cao tối đa */
         display: none;
-        /* Ẩn ban đầu */
+        /* Ẩn ban đầu, JS sẽ cho hiện */
     }
 
     #floating-toc-title {
@@ -42,7 +38,8 @@
     }
 
     #floating-toc-container #toc {
-        padding: 10px 16px 16px 30px;
+        padding: 10px 16px 16px 16px;
+        /* Giảm padding trái */
         font-size: 14px;
         max-height: 400px;
         overflow-y: auto;
@@ -54,12 +51,29 @@
         display: none;
     }
 
-    #floating-toc-container #toc ul {
-        padding-left: 20px;
+    /* CSS MỚI: Dùng class để thụt lề */
+    #floating-toc-container #toc ul,
+    #floating-toc-container #toc li {
+        padding-left: 0;
+        list-style-type: none;
     }
 
     #floating-toc-container #toc li {
         margin-top: 8px;
+    }
+
+    #floating-toc-container #toc li.toc-level-h2 {
+        font-weight: bold;
+    }
+
+    #floating-toc-container #toc li.toc-level-h3 {
+        padding-left: 15px;
+        /* Thụt lề cấp 3 */
+    }
+
+    #floating-toc-container #toc li.toc-level-h4 {
+        padding-left: 30px;
+        /* Thụt lề cấp 4 */
     }
 
     #floating-toc-container #toc a {
@@ -71,8 +85,7 @@
         text-decoration: underline;
     }
 
-    /* Ẩn mục lục gốc (rất quan trọng) */
-    #main_content>p:first-child>ul#toc,
+    /* Ẩn mục lục gốc (nếu có) */
     #main_content>ul#toc {
         display: none !important;
     }
@@ -81,29 +94,27 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
 
-        // 1. Mã nút "Trang chủ" (Đã hoạt động)
+        // 1. Mã nút "Trang chủ" (Hoạt động tốt)
         var homeButton = document.querySelector(".page-header .btn");
         if (homeButton) {
             homeButton.innerHTML = "Trang chủ";
             homeButton.href = "{{ site.baseurl | default: '' }}/";
         }
 
-        // 2. Mã thay đổi footer (ĐÃ SỬA)
-        // Đổi selector thành ".site-footer" và thay thế nội dung bên trong
+        // 2. Mã thay đổi footer (Hoạt động tốt)
         var footerContainer = document.querySelector(".site-footer");
         if (footerContainer) {
-            // Ghi đè toàn bộ nội dung của footer
             footerContainer.innerHTML = '<span class="site-footer-credits">Bản quyền © 2025 ViAIBOT. Phát triển bởi VNPT Vĩnh Long.</span>';
         }
 
-        // 3. Mã tạo Mục Lục Trôi
-        // Tìm mục lục gốc mà Kramdown tạo ra
-        var originalToc = document.getElementById("toc");
+        // --- MỤC 3: MÃ MỤC LỤC TRÔI (ĐÃ VIẾT LẠI HOÀN TOÀN) ---
 
-        // Chỉ chạy nếu trang này có mục lục (id="toc")
-        if (originalToc) {
+        // Tìm tất cả các tiêu đề (h2, h3, h4) bên trong nội dung chính
+        var headings = document.querySelectorAll("#main_content h2, #main_content h3, #main_content h4");
 
-            // Tạo các phần tử cho widget
+        // Chỉ tạo widget nếu có nhiều hơn 1 tiêu đề (để tạo mục lục)
+        if (headings.length > 1) {
+
             var tocContainer = document.createElement("div");
             tocContainer.id = "floating-toc-container";
 
@@ -111,21 +122,53 @@
             tocTitle.id = "floating-toc-title";
             tocTitle.textContent = "Mục lục";
 
-            // Gắn các phần tử lại
-            tocContainer.appendChild(tocTitle);
-            tocContainer.appendChild(originalToc); // Di chuyển <ul> vào widget
+            var tocList = document.createElement("ul");
+            tocList.id = "toc"; // Vẫn dùng id="toc" để CSS áp dụng
 
-            // Thêm widget vào trang
-            document.body.appendChild(tocContainer);
+            headings.forEach(function (heading) {
+                // Bỏ qua tiêu đề "Mục lục"
+                if (heading.textContent.trim().toLowerCase() === "mục lục") {
+                    // Ẩn tiêu đề "Mục lục" và dấu "---"
+                    heading.style.display = "none";
+                    var hr = heading.nextElementSibling;
+                    if (hr && hr.tagName === 'HR') {
+                        hr.style.display = 'none';
+                    }
+                    return;
+                }
 
-            // Cho widget hiển thị
-            tocContainer.style.display = "block";
+                // Đảm bảo tiêu đề có ID (rất quan trọng)
+                // Cấu hình auto_ids: true trong _config.yml sẽ làm việc này
+                if (!heading.id) {
+                    return; // Bỏ qua nếu không có ID
+                }
 
-            // Thêm sự kiện click để ẩn/hiện
-            tocTitle.addEventListener("click", function () {
-                tocContainer.classList.toggle("toc-collapsed");
+                var tocItem = document.createElement("li");
+                var tocLink = document.createElement("a");
+
+                tocLink.textContent = heading.textContent;
+                tocLink.href = "#" + heading.id; // Liên kết đến id của tiêu đề
+
+                // Thêm class dựa trên cấp độ (h2, h3, h4)
+                tocItem.className = "toc-level-"Mục lục" + heading.tagName.toLowerCase();
+
+                tocItem.appendChild(tocLink);
+                tocList.appendChild(tocItem);
             });
-        }
 
+            // Chỉ hiển thị widget nếu đã thêm ít nhất 1 mục
+            if (tocList.children.length > 0) {
+                tocContainer.appendChild(tocTitle);
+                tocContainer.appendChild(tocList);
+                document.body.appendChild(tocContainer);
+                tocContainer.style.display = "block";
+
+                // Thêm sự kiện click để ẩn/hiện
+                tocTitle.addEventListener("click", function () {
+                    tocContainer.classList.toggle("toc-collapsed");
+                });
+            }
+        }
+        // --- KẾT THÚC MỤC 3 ---
     });
 </script>
