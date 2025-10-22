@@ -7,6 +7,7 @@
 2. [Tra cứu tài liệu](/aibot_hdsd/LUONG_2)
 3. [Tạo và sử dụng tính năng](/aibot_hdsd/LUONG_3)
 4. [Tạo trợ lý AI tùy biến theo mục đích sử dụng](/aibot_hdsd/LUONG_4)
+5. [Thêm tri thức mới cho trợ lý ảo](/aibot_hdsd/LUONG_5)
 
 
 ## Tài liệu
