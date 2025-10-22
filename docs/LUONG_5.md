@@ -21,3 +21,4 @@
 ### 2.2. Chọn từ Danh sách tri thức
 
 ![Chọn từ danh sách tri thức](images/ChonTriThucTuKho.gif)
+
