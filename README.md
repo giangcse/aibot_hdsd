@@ -9,7 +9,8 @@
 4. [Tạo trợ lý AI tùy biến theo mục đích sử dụng](/aibot_hdsd/LUONG_4)
 
 
-## Mục lục
+## Tài liệu
+- [Tài liệu kỹ thuật](/aibot_hdsd/TAILIEU_KYTHUAT)
 - [Hướng dẫn sử dụng hệ thống chatbot hỗ trợ tra cứu thông tin VIAIBOT (dành cho người dùng cá nhân)](/aibot_hdsd/HDSD_CANHAN)
 - [Hướng dẫn sử dụng hệ thống chatbot hỗ trợ tra cứu thông tin VIAIBOT (dành cho nhóm người dùng)](/aibot_hdsd/HDSD_NHOM)
 - [Hướng dẫn sử dụng hệ thống chatbot hỗ trợ tra cứu thông tin VIAIBOT (dành cho IT)](/aibot_hdsd/HDSD_IT)
