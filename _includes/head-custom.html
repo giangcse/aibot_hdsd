@@ -1,15 +1,145 @@
+<style>
+    /* 1. CSS cho Mục Lục Trôi */
+    #floating-toc-container {
+        position: fixed;
+        top: 80px;
+        /* Khoảng cách từ lề trên */
+        right: 20px;
+        /* Khoảng cách từ lề phải */
+        width: 300px;
+        /* Độ rộng của widget */
+        z-index: 999;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        max-height: calc(100vh - 100px);
+        /* Chiều cao tối đa, tránh tràn màn hình */
+        display: none;
+        /* Ẩn ban đầu, JS sẽ cho hiện nếu tìm thấy mục lục */
+    }
+
+    #floating-toc-title {
+        padding: 12px 16px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: #f7f7f7;
+        border-bottom: 1px solid #e0e0e0;
+        border-radius: 8px 8px 0 0;
+        user-select: none;
+        /* Không cho chọn chữ tiêu đề */
+    }
+
+    /* Thêm mũi tên chỉ thị đóng/mở */
+    #floating-toc-title::after {
+        content: '▲';
+        float: right;
+        font-size: 12px;
+        transition: transform 0.2s;
+    }
+
+    #floating-toc-container.toc-collapsed #floating-toc-title::after {
+        transform: rotate(180deg);
+        /* Xoay mũi tên khi đóng */
+    }
+
+    /* Đây chính là thẻ <ul id="toc"> nguyên bản */
+    #floating-toc-container #toc {
+        padding: 10px 16px 16px 30px;
+        /* Padding cho danh sách */
+        font-size: 14px;
+        max-height: 400px;
+        /* Chiều cao tối đa của danh sách */
+        overflow-y: auto;
+        /* Thêm thanh cuộn nếu danh sách quá dài */
+        display: block;
+        /* Mặc định hiển thị */
+        margin: 0;
+    }
+
+    #floating-toc-container.toc-collapsed #toc {
+        display: none;
+        /* Ẩn danh sách khi đóng */
+    }
+
+    #floating-toc-container #toc ul {
+        padding-left: 20px;
+        /* Thụt lề cho các cấp con */
+    }
+
+    #floating-toc-container #toc li {
+        margin-top: 8px;
+    }
+
+    #floating-toc-container #toc a {
+        text-decoration: none;
+        color: #007bff;
+    }
+
+    #floating-toc-container #toc a:hover {
+        text-decoration: underline;
+    }
+
+    /* Quan trọng: Ẩn mục lục gốc 
+    Kramdown đôi khi bọc #toc trong thẻ <p>
+  */
+    #main_content>p:first-child>ul#toc {
+        display: none !important;
+    }
+
+    #main_content>ul#toc {
+        display: none !important;
+    }
+</style>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
 
+        // 1. Mã để sửa nút "View on GitHub" thành "Trang chủ"
         var homeButton = document.querySelector(".page-header .btn");
         if (homeButton) {
             homeButton.innerHTML = "Trang chủ";
             homeButton.href = "{{ site.baseurl | default: '' }}/";
         }
 
+        // 2. Mã để thay đổi nội dung footer
         var footerContent = document.querySelector(".site-footer-inner");
         if (footerContent) {
-            footerContent.innerHTML = "Bản quyền © 2025 ViAIBOT. Phát hành bởi VNPT Vĩnh Long.";
+            footerContent.innerHTML = "Bản quyền © 2025 ViAIBOT. Phát triển bởi VNPT Vĩnh Long.";
+        }
+
+        // 3. Mã để tạo Mục Lục Trôi
+        var originalToc = document.getElementById("toc"); // Tìm thẻ <ul id="toc">
+
+        // Chỉ chạy nếu trang này có mục lục
+        if (originalToc) {
+
+            // Tạo container
+            var tocContainer = document.createElement("div");
+            tocContainer.id = "floating-toc-container";
+
+            // Tạo Tiêu đề/Nút bấm
+            var tocTitle = document.createElement("div");
+            tocTitle.id = "floating-toc-title";
+            tocTitle.textContent = "Mục lục";
+
+            // Thêm tiêu đề vào container
+            tocContainer.appendChild(tocTitle);
+
+            // Di chuyển <ul> (originalToc) vào container
+            tocContainer.appendChild(originalToc);
+
+            // Thêm container vào body
+            document.body.appendChild(tocContainer);
+
+            // Cho widget hiển thị
+            tocContainer.style.display = "block";
+
+            // Thêm sự kiện click để ẩn/hiện mục lục
+            tocTitle.addEventListener("click", function () {
+                tocContainer.classList.toggle("toc-collapsed");
+            });
         }
 
     });
