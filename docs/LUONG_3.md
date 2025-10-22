@@ -1,8 +1,10 @@
 # TẠO VÀ SỬ DỤNG TÍNH NĂNG
 
 ## Mục lục
+{:.no_toc}
 
-{:toc}
+* {:toc}
+
 ---
 
 ## 1. Đăng nhập

@@ -1,8 +1,10 @@
 # KỸ THUẬT VIẾT PROMPT
 
 ## Mục lục
+{:.no_toc}
 
-{:toc}
+* {:toc}
+
 ---
 
 ## 1. Prompt là gì?

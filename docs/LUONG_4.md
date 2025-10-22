@@ -4,8 +4,10 @@
 > Nên sử dụng cho tài khoản dùng chung
 
 ## Mục lục
+{:.no_toc}
 
-{:toc}
+* {:toc}
+
 ---
 
 ## 1. Đăng nhập

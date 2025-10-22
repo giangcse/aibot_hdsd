@@ -1,8 +1,10 @@
 # TÀI LIỆU KỸ THUẬT
 
 ## Mục lục
+{:.no_toc}
 
-{:toc}
+* {:toc}
+
 ---
 
 ## I. Generative AI (Gen AI), Large Language Model (LLM) và Retrieval‑Augmented Generation (RAG) là gì? Mối liên hệ giữa RAG và Gen AI?

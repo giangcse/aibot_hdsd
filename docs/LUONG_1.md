@@ -1,8 +1,10 @@
 # TẠO VÀ SỬ DỤNG TRỢ LÝ AI
 
 ## Mục lục
+{:.no_toc}
 
-{:toc}
+* {:toc}
+
 ---
 
 ## 1. Đăng nhập
