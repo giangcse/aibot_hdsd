@@ -11,6 +11,7 @@
 
 
 ## Tài liệu
+- [Kỹ thuật viết Prompt](/aibot_hdsd/HD_PROMPT)
 - [Tài liệu kỹ thuật](/aibot_hdsd/TAILIEU_KYTHUAT)
 - [Hướng dẫn sử dụng hệ thống chatbot hỗ trợ tra cứu thông tin VIAIBOT (dành cho người dùng cá nhân)](/aibot_hdsd/HDSD_CANHAN)
 - [Hướng dẫn sử dụng hệ thống chatbot hỗ trợ tra cứu thông tin VIAIBOT (dành cho nhóm người dùng)](/aibot_hdsd/HDSD_NHOM)
