@@ -4,7 +4,7 @@
 > Nên sử dụng cho tài khoản dùng chung
 
 ## Mục lục
-* TOC
+
 {:toc}
 ---
 

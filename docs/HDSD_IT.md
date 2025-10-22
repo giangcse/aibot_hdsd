@@ -1,7 +1,7 @@
 # HƯỚNG DẪN SỬ DỤNG HỆ THỐNG CHATBOT HỖ TRỢ TRA CỨU THÔNG TIN VIAIBOT (DÀNH CHO IT)
 ---
 ## Mục lục
-* TOC
+
 {:toc}
 ---
 

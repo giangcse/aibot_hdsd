@@ -1,7 +1,7 @@
 # KỸ THUẬT VIẾT PROMPT
 
 ## Mục lục
-* TOC
+
 {:toc}
 ---
 

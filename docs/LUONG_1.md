@@ -1,7 +1,7 @@
 # TẠO VÀ SỬ DỤNG TRỢ LÝ AI
 
 ## Mục lục
-* TOC
+
 {:toc}
 ---
 
