@@ -11,5 +11,12 @@
             // và thêm dấu / vào cuối.
             homeButton.href = "{{ site.baseurl | default: '' }}/";
         }
+
+        // 2. Mã để thay đổi nội dung footer
+        var footerContent = document.querySelector(".site-footer-inner");
+        if (footerContent) {
+            // BẠN CÓ THỂ THAY ĐỔI NỘI DUNG HTML Ở ĐÂY:
+            footerContent.innerHTML = "Bản quyền © 2025 ViAIBOT. Phát hành bởi VNPT Vĩnh Long.";
+        }
     });
 </script>
