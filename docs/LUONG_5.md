@@ -1,8 +1,10 @@
 # THÊM TRI THỨC MỚI CHO TRỢ LÝ ẢO
 
 ## Mục lục
-* TOC
-{:toc}
+{:.no_toc}
+
+* {:toc}
+
 ---
 
 ## 1. Đăng nhập

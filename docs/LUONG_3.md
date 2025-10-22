@@ -1,10 +1,5 @@
 # TẠO VÀ SỬ DỤNG TÍNH NĂNG
 
-## Mục lục
-* TOC
-{:toc}
----
-
 ## 1. Đăng nhập
 Đăng nhập vào hệ thống tại địa chỉ [https://aibot.vnptvinhlong.vn/dang-nhap](https://aibot.vnptvinhlong.vn/dang-nhap)
 

@@ -1,10 +1,5 @@
 # KỸ THUẬT VIẾT PROMPT
 
-## Mục lục
-* TOC
-{:toc}
----
-
 ## 1. Prompt là gì?
 Prompt là một đoạn văn bản hoặc câu lệnh được sử dụng để hướng dẫn hoặc kích hoạt một mô hình ngôn ngữ lớn (LLM). Prompt có thể bao gồm câu hỏi, yêu cầu, hoặc bất kỳ thông tin nào mà người dùng muốn mô hình phản hồi hoặc thực hiện.
 
