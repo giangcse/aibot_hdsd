@@ -14,6 +14,7 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  toc_levels: 1..6
+  auto_ids: true 
 permalink: pretty
-
 encoding: UTF-8
