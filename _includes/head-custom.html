@@ -1,0 +1,19 @@
+<script>
+    // Chờ cho trang tải xong
+    document.addEventListener("DOMContentLoaded", function () {
+
+        // Tìm nút ".btn" trong phần ".page-header"
+        var homeButton = document.querySelector(".page-header .btn");
+
+        // Nếu tìm thấy nút
+        if (homeButton) {
+            // 1. Thay đổi chữ
+            homeButton.innerHTML = "Trang chủ";
+
+            // 2. Thay đổi đường dẫn (href) để trỏ về trang chủ
+            // Thẻ liquid {{ "/" | relative_url }} sẽ tự động 
+            // trỏ về trang gốc một cách chính xác
+            homeButton.href = "{{ " / " | relative_url }}";
+        }
+    });
+</script>
