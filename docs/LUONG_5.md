@@ -22,3 +22,9 @@
 
 ![Chọn từ danh sách tri thức](../images/ChonTriThucTuKho.gif)
 
+### 2.3. Thêm tri thức từ URL (website khác)
+
+![Thêm tri thức từ URL](../images/ThemTriThucTuURL.gif)
+
+
+>_Khi thêm tri thức thành công, hệ thống sẽ tự động huấn luyện lại mô hình trợ lý AI với tri thức mới. Quá trình này có thể mất vài phút tùy vào lượng tri thức được thêm vào._
