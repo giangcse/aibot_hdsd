@@ -1,4 +1,9 @@
 # HƯỚNG DẪN SỬ DỤNG HỆ THỐNG CHATBOT HỖ TRỢ TRA CỨU THÔNG TIN VIAIBOT (DÀNH CHO IT)
+---
+## Mục lục
+* TOC
+{:toc}
+---
 
 ## 1. Trang chủ
 Trang chủ gồm 2 phần chính: Thanh điều hướng (1) và khu vực hiển thị nội dung (2).

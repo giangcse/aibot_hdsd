@@ -1,5 +1,10 @@
 # TÀI LIỆU KỸ THUẬT
 
+## Mục lục
+* TOC
+{:toc}
+---
+
 ## I. Generative AI (Gen AI), Large Language Model (LLM) và Retrieval‑Augmented Generation (RAG) là gì? Mối liên hệ giữa RAG và Gen AI?
 
 > VIAIBOT là tên sản phẩm chatbot sử dụng kỹ thuật RAG để cung cấp câu trả lời.
