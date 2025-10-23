@@ -1,5 +1,4 @@
 <style>
-    /* 1. CSS cho Mục Lục Trôi */
     #floating-toc-container {
         position: fixed;
         top: 80px;
@@ -71,7 +70,6 @@
         text-decoration: underline;
     }
 
-    /* Ẩn mục lục gốc (rất quan trọng) */
     #main_content>p:first-child>ul#toc,
     #main_content>ul#toc {
         display: none !important;
@@ -92,6 +90,31 @@
         if (footerContainer) {
             footerContainer.innerHTML = '<span class="site-footer-credits">Bản quyền © 2025 ViAIBOT. Phát hành bởi VNPT Vĩnh Long.</span>';
         }
+
+        // 1. Tìm mục lục gốc (do `{:toc}` trong file .md tạo ra)
+        var originalToc = document.querySelector("#main_content ul#toc");
+
+        // 2. Tìm khung trôi (từ file footer-custom.html bạn vừa tạo)
+        var floatingContainer = document.getElementById("floating-toc-container");
+
+        // 3. Tìm tiêu đề của khung trôi (để gán sự kiện click)
+        var tocTitle = document.getElementById("floating-toc-title");
+
+        // 4. Chỉ thực hiện nếu trang này CÓ mục lục VÀ CÓ khung trôi
+        if (originalToc && floatingContainer && tocTitle) {
+
+            // 5. Di chuyển mục lục gốc vào trong khung trôi
+            floatingContainer.appendChild(originalToc);
+
+            // 6. Hiển thị khung trôi lên (vì CSS gốc đang để display: none)
+            floatingContainer.style.display = "block";
+
+            // 7. Thêm sự kiện click vào tiêu đề để Ẩn/Hiện mục lục
+            tocTitle.addEventListener("click", function () {
+                floatingContainer.classList.toggle("toc-collapsed");
+            });
+        }
+
 
     });
 </script>
