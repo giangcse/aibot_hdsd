@@ -1,4 +1,5 @@
 <style>
+    /* 1. CSS cho Mục Lục Trôi (GIỮ NGUYÊN) */
     #floating-toc-container {
         position: fixed;
         top: 80px;
@@ -70,8 +71,8 @@
         text-decoration: underline;
     }
 
-    #main_content>p:first-child>ul#toc,
-    #main_content>ul#toc {
+    .main-content>p:first-child>ul#toc,
+    .main-content>ul#toc {
         display: none !important;
     }
 </style>
@@ -79,6 +80,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
 
+        // --- (Code cũ của bạn - GIỮ NGUYÊN) ---
         var homeButton = document.querySelector(".page-header .btn");
         if (homeButton) {
             homeButton.innerHTML = "Trang chủ";
@@ -92,7 +94,7 @@
         }
 
         // 1. Tìm mục lục gốc (do `{:toc}` trong file .md tạo ra)
-        var originalToc = document.querySelector("#main_content ul#toc");
+        var originalToc = document.querySelector(".main-content ul#toc");
 
         // 2. Tìm khung trôi (từ file footer-custom.html bạn vừa tạo)
         var floatingContainer = document.getElementById("floating-toc-container");
