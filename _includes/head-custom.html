@@ -198,11 +198,14 @@
         border-bottom: 1px solid #e0e0e0;
         border-radius: 12px 12px 0 0;
         user-select: none;
+        letter-spacing: 0.04em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     #floating-toc-title::after {
-        content: '▲';
-        float: right;
+        content: '\25B2';
         font-size: 12px;
         transition: transform 0.2s ease;
     }
@@ -218,6 +221,7 @@
         overflow-y: auto;
         display: block;
         margin: 0;
+        scroll-behavior: smooth;
     }
 
     #floating-toc-container.toc-collapsed #toc {
@@ -225,11 +229,15 @@
     }
 
     #floating-toc-container #toc ul {
-        padding-left: 20px;
+        padding-left: 18px;
+        margin: 12px 0 0;
+        border-left: 1px dashed #d0d7e1;
     }
 
     #floating-toc-container #toc li {
-        margin-top: 8px;
+        margin-top: 10px;
+        list-style: none;
+        position: relative;
     }
 
     #floating-toc-container #toc a {
@@ -238,7 +246,26 @@
     }
 
     #floating-toc-container #toc a:hover {
-        text-decoration: underline;
+        color: #1f6feb;
+        background-color: rgba(31, 111, 235, 0.08);
+    }
+
+    #floating-toc-container #toc a::before {
+        content: '\2022';
+        color: #9aa5b1;
+        font-size: 12px;
+        transform: translateY(-1px);
+    }
+
+    #floating-toc-container #toc a.active {
+        color: #1f6feb;
+        font-weight: 600;
+        background-color: rgba(31, 111, 235, 0.12);
+        box-shadow: inset 2px 0 0 #1f6feb;
+    }
+
+    #floating-toc-container #toc a.active::before {
+        color: #1f6feb;
     }
 
     .main-content>p:first-child>ul#toc,
@@ -335,7 +362,8 @@
             floatingContainer.style.display = "block";
 
             tocTitle.addEventListener("click", function () {
-                floatingContainer.classList.toggle("toc-collapsed");
+                var isCollapsed = floatingContainer.classList.toggle("toc-collapsed");
+                tocTitle.setAttribute("aria-expanded", (!isCollapsed).toString());
             });
         }
     });
