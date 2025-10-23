@@ -362,7 +362,22 @@
 
         if (originalToc && floatingContainer && tocTitle) {
             floatingContainer.appendChild(originalToc);
-            floatingContainer.style.display = "block";
+
+            var contentEl = document.getElementById('content');
+            var updateTocVisibility = function () {
+                var show = false;
+                if (contentEl) {
+                    var rect = contentEl.getBoundingClientRect();
+                    show = rect.top <= 80; // show once main content reaches near top
+                } else {
+                    show = window.scrollY > 150;
+                }
+                floatingContainer.style.display = show ? 'block' : 'none';
+            };
+
+            updateTocVisibility();
+            window.addEventListener('scroll', updateTocVisibility, { passive: true });
+            window.addEventListener('resize', updateTocVisibility);
 
             tocTitle.addEventListener("click", function () {
                 var isCollapsed = floatingContainer.classList.toggle("toc-collapsed");

@@ -1,20 +1,5 @@
-<nav id="floating-nav" aria-label="Điều hướng tài liệu">
-    <div class="floating-nav-header">
-        <span class="floating-nav-title">Danh mục</span>
-        <button id="floating-nav-toggle" class="floating-nav-toggle" type="button" aria-expanded="true" aria-controls="floating-nav-links">
-            <span class="visually-hidden">Đóng/mở menu</span>
-            <span class="floating-nav-toggle-icon">☰</span>
-        </button>
-    </div>
-    <ul id="floating-nav-links" class="floating-nav-links">
-        {% for item in site.data.navigation %}
-        <li class="floating-nav-item">
-            <a class="floating-nav-link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-</nav>
-
 <div id="floating-toc-container">
     <div id="floating-toc-title">MỤC LỤC</div>
+    <!-- TOC will be moved here dynamically -->
 </div>
+
