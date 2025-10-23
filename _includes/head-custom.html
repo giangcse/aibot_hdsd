@@ -1,15 +1,130 @@
+<style>
+    /* 1. CSS cho Mục Lục Trôi */
+    #floating-toc-container {
+        position: fixed;
+        top: 80px;
+        /* Khoảng cách từ lề trên */
+        right: 20px;
+        /* Khoảng cách từ lề phải */
+        width: 300px;
+        /* Độ rộng của widget */
+        z-index: 999;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        max-height: calc(100vh - 100px);
+        /* Chiều cao tối đa */
+        display: none;
+        /* Ẩn ban đầu */
+    }
+
+    #floating-toc-title {
+        padding: 12px 16px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: #f7f7f7;
+        border-bottom: 1px solid #e0e0e0;
+        border-radius: 8px 8px 0 0;
+        user-select: none;
+    }
+
+    #floating-toc-title::after {
+        content: '▲';
+        float: right;
+        font-size: 12px;
+        transition: transform 0.2s;
+    }
+
+    #floating-toc-container.toc-collapsed #floating-toc-title::after {
+        transform: rotate(180deg);
+    }
+
+    #floating-toc-container #toc {
+        padding: 10px 16px 16px 30px;
+        font-size: 14px;
+        max-height: 400px;
+        overflow-y: auto;
+        display: block;
+        margin: 0;
+    }
+
+    #floating-toc-container.toc-collapsed #toc {
+        display: none;
+    }
+
+    #floating-toc-container #toc ul {
+        padding-left: 20px;
+    }
+
+    #floating-toc-container #toc li {
+        margin-top: 8px;
+    }
+
+    #floating-toc-container #toc a {
+        text-decoration: none;
+        color: #007bff;
+    }
+
+    #floating-toc-container #toc a:hover {
+        text-decoration: underline;
+    }
+
+    /* Ẩn mục lục gốc (rất quan trọng) */
+    #main_content>p:first-child>ul#toc,
+    #main_content>ul#toc {
+        display: none !important;
+    }
+</style>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
 
+        // 1. Mã nút "Trang chủ" (Đã hoạt động)
         var homeButton = document.querySelector(".page-header .btn");
         if (homeButton) {
             homeButton.innerHTML = "Trang chủ";
             homeButton.href = "{{ site.baseurl | default: '' }}/";
         }
 
-        var footerContent = document.querySelector(".site-footer-inner");
-        if (footerContent) {
-            footerContent.innerHTML = "Bản quyền © 2025 ViAIBOT. Phát hành bởi VNPT Vĩnh Long.";
+        // 2. Mã thay đổi footer (ĐÃ SỬA)
+        // Đổi selector thành ".site-footer" và thay thế nội dung bên trong
+        var footerContainer = document.querySelector(".site-footer");
+        if (footerContainer) {
+            // Ghi đè toàn bộ nội dung của footer
+            footerContainer.innerHTML = '<span class="site-footer-credits">Bản quyền © 2025 ViAIBOT. Phát hành bởi VNPT Vĩnh Long.</span>';
+        }
+
+        // 3. Mã tạo Mục Lục Trôi
+        // Tìm mục lục gốc mà Kramdown tạo ra
+        var originalToc = document.getElementById("toc");
+
+        // Chỉ chạy nếu trang này có mục lục (id="toc")
+        if (originalToc) {
+
+            // Tạo các phần tử cho widget
+            var tocContainer = document.createElement("div");
+            tocContainer.id = "floating-toc-container";
+
+            var tocTitle = document.createElement("div");
+            tocTitle.id = "floating-toc-title";
+            tocTitle.textContent = "Mục lục";
+
+            // Gắn các phần tử lại
+            tocContainer.appendChild(tocTitle);
+            tocContainer.appendChild(originalToc); // Di chuyển <ul> vào widget
+
+            // Thêm widget vào trang
+            document.body.appendChild(tocContainer);
+
+            // Cho widget hiển thị
+            tocContainer.style.display = "block";
+
+            // Thêm sự kiện click để ẩn/hiện
+            tocTitle.addEventListener("click", function () {
+                tocContainer.classList.toggle("toc-collapsed");
+            });
         }
 
     });
