@@ -1,32 +1,202 @@
 <style>
-    /* 1. CSS cho Mục Lục Trôi (GIỮ NGUYÊN) */
+    :root {
+        color-scheme: light;
+    }
+
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    body.has-floating-nav .page-content {
+        margin-left: 280px;
+        transition: margin-left 0.3s ease;
+    }
+
+    #floating-nav {
+        position: fixed;
+        top: 120px;
+        left: 24px;
+        width: 240px;
+        z-index: 1000;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 12px;
+        box-shadow: 0 12px 24px rgba(31, 36, 41, 0.08);
+        overflow: hidden;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    #floating-nav .floating-nav-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 20px;
+        background-color: #f7f9fb;
+        border-bottom: 1px solid #e0e6ed;
+    }
+
+    #floating-nav .floating-nav-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1f2429;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    #floating-nav .floating-nav-toggle {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        border: 1px solid transparent;
+        background: #ffffff;
+        color: #1f2429;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    #floating-nav .floating-nav-toggle:focus-visible {
+        outline: 2px solid #1f6feb;
+        outline-offset: 2px;
+    }
+
+    #floating-nav .floating-nav-toggle:hover {
+        background-color: #e9eef6;
+        border-color: #d0d7e1;
+    }
+
+    #floating-nav .floating-nav-toggle-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        line-height: 1;
+    }
+
+    #floating-nav .floating-nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 12px 0 16px;
+        max-height: calc(100vh - 220px);
+        overflow-y: auto;
+    }
+
+    #floating-nav .floating-nav-item {
+        margin: 0;
+    }
+
+    #floating-nav .floating-nav-link {
+        display: block;
+        padding: 10px 20px;
+        color: #1f2933;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        border-left: 4px solid transparent;
+        transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    #floating-nav .floating-nav-link:hover,
+    #floating-nav .floating-nav-link:focus-visible {
+        background-color: #f0f4fb;
+        border-color: #1f6feb;
+        color: #1f6feb;
+        outline: none;
+    }
+
+    #floating-nav .floating-nav-link:active {
+        background-color: #e3eaf6;
+    }
+
+    #floating-nav.is-mobile {
+        left: auto;
+        right: 16px;
+        bottom: 24px;
+        top: auto;
+        width: min(320px, calc(100% - 32px));
+        border-radius: 16px;
+    }
+
+    #floating-nav.is-mobile .floating-nav-header {
+        padding: 14px 18px;
+    }
+
+    #floating-nav.is-mobile .floating-nav-toggle {
+        display: inline-flex;
+    }
+
+    #floating-nav.is-mobile .floating-nav-links {
+        max-height: min(50vh, 420px);
+        padding: 0 0 12px;
+    }
+
+    #floating-nav.is-mobile.collapsed .floating-nav-links {
+        display: none;
+    }
+
+    #floating-nav.is-mobile .floating-nav-link {
+        padding: 12px 18px;
+    }
+
+    @media (max-width: 1200px) {
+        body.has-floating-nav .page-content {
+            margin-left: 260px;
+        }
+
+        #floating-nav {
+            width: 220px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        body.has-floating-nav .page-content {
+            margin-left: 0;
+        }
+
+        #floating-nav {
+            box-shadow: 0 18px 34px rgba(15, 23, 42, 0.2);
+        }
+
+        #floating-nav .floating-nav-links {
+            padding-top: 0;
+        }
+    }
+
+    /* 1. CSS cho Mục Lục Trôi */
     #floating-toc-container {
         position: fixed;
         top: 80px;
-        /* Khoảng cách từ lề trên */
-        right: 20px;
-        /* Khoảng cách từ lề phải */
+        right: 24px;
         width: 300px;
-        /* Độ rộng của widget */
-        z-index: 999;
+        z-index: 900;
         background-color: #ffffff;
         border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        max-height: calc(100vh - 100px);
-        /* Chiều cao tối đa */
+        border-radius: 12px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        max-height: calc(100vh - 120px);
         display: none;
-        /* Ẩn ban đầu */
     }
 
     #floating-toc-title {
-        padding: 12px 16px;
+        padding: 14px 18px;
         font-size: 16px;
-        font-weight: bold;
+        font-weight: 600;
         cursor: pointer;
-        background-color: #f7f7f7;
+        background-color: #f7f9fb;
         border-bottom: 1px solid #e0e0e0;
-        border-radius: 8px 8px 0 0;
+        border-radius: 12px 12px 0 0;
         user-select: none;
     }
 
@@ -34,7 +204,7 @@
         content: '▲';
         float: right;
         font-size: 12px;
-        transition: transform 0.2s;
+        transition: transform 0.2s ease;
     }
 
     #floating-toc-container.toc-collapsed #floating-toc-title::after {
@@ -42,9 +212,9 @@
     }
 
     #floating-toc-container #toc {
-        padding: 10px 16px 16px 30px;
+        padding: 12px 20px 18px 32px;
         font-size: 14px;
-        max-height: 400px;
+        max-height: 420px;
         overflow-y: auto;
         display: block;
         margin: 0;
@@ -64,7 +234,7 @@
 
     #floating-toc-container #toc a {
         text-decoration: none;
-        color: #007bff;
+        color: #1f6feb;
     }
 
     #floating-toc-container #toc a:hover {
@@ -75,48 +245,98 @@
     .main-content>ul#toc {
         display: none !important;
     }
+
+    @media (max-width: 1200px) {
+        #floating-toc-container {
+            width: 260px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        #floating-toc-container {
+            position: static;
+            width: auto;
+            max-width: 100%;
+            box-shadow: none;
+            border-radius: 12px;
+            margin: 24px 0;
+        }
+
+        #floating-toc-container #toc {
+            max-height: none;
+        }
+    }
 </style>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-
-        // --- (Code cũ của bạn - GIỮ NGUYÊN) ---
         var homeButton = document.querySelector(".page-header .btn");
         if (homeButton) {
             homeButton.innerHTML = "Trang chủ";
             homeButton.href = "{{ site.baseurl | default: '' }}/";
         }
 
-
         var footerContainer = document.querySelector(".site-footer");
         if (footerContainer) {
             footerContainer.innerHTML = '<span class="site-footer-credits">Bản quyền © 2025 ViAIBOT. Phát hành bởi VNPT Vĩnh Long.</span>';
         }
 
-        // 1. Tìm mục lục gốc (do `{:toc}` trong file .md tạo ra)
+        var floatingNav = document.getElementById("floating-nav");
+        var navToggle = document.getElementById("floating-nav-toggle");
+        var navToggleIcon = navToggle ? navToggle.querySelector(".floating-nav-toggle-icon") : null;
+        if (floatingNav) {
+            document.body.classList.add("has-floating-nav");
+
+            var updateNavMode = function () {
+                if (window.innerWidth <= 992) {
+                    floatingNav.classList.add("is-mobile");
+                    if (!floatingNav.classList.contains("collapsed")) {
+                        floatingNav.classList.add("collapsed");
+                    }
+                    if (navToggle) {
+                        navToggle.setAttribute("aria-expanded", "false");
+                    }
+                    if (navToggleIcon) {
+                        navToggleIcon.textContent = "☰";
+                    }
+                } else {
+                    floatingNav.classList.remove("is-mobile");
+                    floatingNav.classList.remove("collapsed");
+                    if (navToggle) {
+                        navToggle.setAttribute("aria-expanded", "true");
+                    }
+                    if (navToggleIcon) {
+                        navToggleIcon.textContent = "✕";
+                    }
+                }
+            };
+
+            if (navToggle) {
+                navToggle.addEventListener("click", function () {
+                    var isCollapsed = floatingNav.classList.toggle("collapsed");
+                    var expanded = (!isCollapsed).toString();
+                    navToggle.setAttribute("aria-expanded", expanded);
+                    if (navToggleIcon) {
+                        navToggleIcon.textContent = isCollapsed ? "☰" : "✕";
+                    }
+                });
+            }
+
+            updateNavMode();
+            window.addEventListener("resize", updateNavMode);
+        }
+
         var originalToc = document.querySelector(".main-content ul#toc");
-
-        // 2. Tìm khung trôi (từ file footer-custom.html bạn vừa tạo)
         var floatingContainer = document.getElementById("floating-toc-container");
-
-        // 3. Tìm tiêu đề của khung trôi (để gán sự kiện click)
         var tocTitle = document.getElementById("floating-toc-title");
 
-        // 4. Chỉ thực hiện nếu trang này CÓ mục lục VÀ CÓ khung trôi
         if (originalToc && floatingContainer && tocTitle) {
-
-            // 5. Di chuyển mục lục gốc vào trong khung trôi
             floatingContainer.appendChild(originalToc);
-
-            // 6. Hiển thị khung trôi lên (vì CSS gốc đang để display: none)
             floatingContainer.style.display = "block";
 
-            // 7. Thêm sự kiện click vào tiêu đề để Ẩn/Hiện mục lục
             tocTitle.addEventListener("click", function () {
                 floatingContainer.classList.toggle("toc-collapsed");
             });
         }
-
-
     });
 </script>
