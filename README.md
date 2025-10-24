@@ -1,5 +1,3 @@
-![image](images/banner.png)
-
 # HƯỚNG DẪN SỬ DỤNG HỆ THỐNG CHATBOT VIAIBOT
 
 ## Các workflow cơ bản
