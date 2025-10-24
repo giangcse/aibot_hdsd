@@ -1,6 +1,6 @@
 # TÀI LIỆU KỸ THUẬT
 
-## Mục lục
+
 * TOC
 {:toc}
 ---

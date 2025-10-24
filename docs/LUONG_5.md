@@ -1,6 +1,6 @@
 # THÊM TRI THỨC MỚI CHO TRỢ LÝ ẢO
 
-## Mục lục
+
 * TOC
 {:toc}
 ---

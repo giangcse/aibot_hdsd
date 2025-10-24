@@ -3,7 +3,7 @@
 > Lưu ý: Đây là tính năng nâng cao, yêu cầu người dùng có kiến thức về prompt engineering để tạo prompt phù hợp với mục đích sử dụng.
 > Nên sử dụng cho tài khoản dùng chung
 
-## Mục lục
+
 * TOC
 {:toc}
 ---

@@ -1,6 +1,6 @@
 # TRA CỨU TÀI LIỆU
 
-## Mục lục
+
 * TOC
 {:toc}
 ---

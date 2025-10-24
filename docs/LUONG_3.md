@@ -1,6 +1,6 @@
 # TẠO VÀ SỬ DỤNG TÍNH NĂNG
 
-## Mục lục
+
 * TOC
 {:toc}
 ---
