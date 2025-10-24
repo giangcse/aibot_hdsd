@@ -7,6 +7,7 @@
 4. [Tạo trợ lý AI tùy biến theo mục đích sử dụng](/aibot_hdsd/docs/LUONG_4)
 5. [Thêm tri thức mới cho trợ lý ảo](/aibot_hdsd/docs/LUONG_5)
 6. [Tìm kiếm thông tin trên internet](/aibot_hdsd/docs/LUONG_6)
+6. [Chat Ngoài kho tri thức](/aibot_hdsd/docs/LUONG_7)
 
 
 ## Tài liệu
