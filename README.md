@@ -11,6 +11,7 @@
 
 
 ## Tài liệu
+- [Giới thiệu tổng quan](/aibot_hdsd/docs/GIOITHIEU)
 - [Hướng dẫn sử dụng](/aibot_hdsd/docs/HDSD_CANHAN)
 - [Kỹ thuật viết Prompt](/aibot_hdsd/docs/HD_PROMPT)
 - [Tài liệu kỹ thuật](/aibot_hdsd/docs/TAILIEU_KYTHUAT)
