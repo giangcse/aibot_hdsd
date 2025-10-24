@@ -347,7 +347,11 @@
 
         var footerContainer = document.querySelector(".site-footer");
         if (footerContainer) {
-            footerContainer.innerHTML = '<span class="site-footer-credits">Bản quyền © 2025 ViAIBOT. Phát hành bởi VNPT Vĩnh Long.</span>';
+            footerContainer.innerHTML = `<span class="site-footer-credits">
+                                            Publisher: {{ author.name }}
+
+                                            Department: {{ author.department }}
+                                        </span>`;
         }
 
         var floatingNav = document.getElementById("floating-nav");

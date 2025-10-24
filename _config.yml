@@ -1,15 +1,18 @@
 theme: jekyll-theme-cayman 
-title: HDSD Chatbot ViAIBOT
-description: Trang web hướng dẫn sử dụng Trợ lý ảo AI-ViAIBOT.
+title: HDSD Chatbot VIAIBOT
+description: Trang web hướng dẫn sử dụng Trợ lý ảo AI-VIAIBOT.
 show_downloads: false 
 plugins:
   - jekyll-seo-tag
 author:
   name: Phan Thanh Giảng
-  email: giangphan028@gmail.com
+  email: giang@giangpt.dev
+  url: https://giangpt.dev/
+  department: Phòng Giải pháp - TT Kinh doanh Giải pháp - VNPT Vĩnh Long
 social:
   github: giangcse
   twitter: giangpt2808
+  telegram: giang_cse
 markdown: kramdown
 kramdown:
   input: GFM
