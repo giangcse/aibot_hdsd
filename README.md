@@ -15,3 +15,8 @@
 - [Hướng dẫn sử dụng](/aibot_hdsd/docs/HDSD_CANHAN)
 - [Kỹ thuật viết Prompt](/aibot_hdsd/docs/HD_PROMPT)
 - [Tài liệu kỹ thuật](/aibot_hdsd/docs/TAILIEU_KYTHUAT)
+
+
+## Tải về
+- [Slides giới thiệu VIAIBOT (Powerpoint)](/aibot_hdsd/docs/taphuan_sudung_viaibot.pptx)
+- [Tài liệu hướng dẫn sử dụng (Word)](/aibot_hdsd/docs/HDSD.docx)
